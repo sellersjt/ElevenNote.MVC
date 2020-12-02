@@ -70,6 +70,10 @@
     <Compile Include="Migrations\202012020116234_AddNullToModifiedUtc.designer.cs">
       <DependentUpon>202012020116234_AddNullToModifiedUtc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012022145235_AddIsStarred.cs" />
+    <Compile Include="Migrations\202012022145235_AddIsStarred.designer.cs">
+      <DependentUpon>202012022145235_AddIsStarred.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012020116234_AddNullToModifiedUtc.resx">
       <DependentUpon>202012020116234_AddNullToModifiedUtc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012022145235_AddIsStarred.resx">
+      <DependentUpon>202012022145235_AddIsStarred.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
