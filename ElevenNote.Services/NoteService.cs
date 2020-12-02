@@ -96,6 +96,7 @@ namespace ElevenNote.Services
                 entity.Content = model.Content;
                 //entity.CategoryId = model.CategoryId;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
+                entity.IsStarred = model.IsStarred;
 
                 return ctx.SaveChanges() == 1;
             }
