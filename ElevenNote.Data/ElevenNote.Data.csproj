@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202012020057446_InitialCreate.cs" />
     <Compile Include="Migrations\202012020057446_InitialCreate.designer.cs">
@@ -73,6 +74,10 @@
     <Compile Include="Migrations\202012022145235_AddIsStarred.cs" />
     <Compile Include="Migrations\202012022145235_AddIsStarred.designer.cs">
       <DependentUpon>202012022145235_AddIsStarred.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012072324182_AddCategory.cs" />
+    <Compile Include="Migrations\202012072324182_AddCategory.designer.cs">
+      <DependentUpon>202012072324182_AddCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
@@ -94,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012022145235_AddIsStarred.resx">
       <DependentUpon>202012022145235_AddIsStarred.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012072324182_AddCategory.resx">
+      <DependentUpon>202012072324182_AddCategory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
