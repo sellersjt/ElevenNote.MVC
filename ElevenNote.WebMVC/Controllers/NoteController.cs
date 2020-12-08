@@ -1,4 +1,5 @@
-﻿using ElevenNote.Models;
+﻿using ElevenNote.Data;
+using ElevenNote.Models;
 using ElevenNote.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -24,7 +25,19 @@ namespace ElevenNote.WebMVC.Controllers
         // GET: Create
         public ActionResult Create()
         {
-            return View(new NoteCreate());
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CategoryService(userId);
+            var categories = service.GetCategories();
+
+            var viewModel = new CreateNoteViewModel();
+
+            viewModel.Categories = categories.Select(c => new SelectListItem
+            {
+                Text = c.Name,
+                Value = c.CategoryId.ToString()
+            });
+
+            return View(viewModel);
         }
 
         // POST: Create

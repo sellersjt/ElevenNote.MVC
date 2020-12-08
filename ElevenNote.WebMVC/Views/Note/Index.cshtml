@@ -50,7 +50,10 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Category)
+                @if (item.Category != null)
+                {
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsStarred, new { Id = item.NoteId })
