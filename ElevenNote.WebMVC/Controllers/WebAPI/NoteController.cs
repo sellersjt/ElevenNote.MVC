@@ -30,6 +30,7 @@ namespace ElevenNote.WebMVC.Controllers.WebAPI
                     NoteId = detail.NoteId,
                     Title = detail.Title,
                     Content = detail.Content,
+                    CategoryId = detail.Category.CategoryId,
                     IsStarred = newState
                 };
 

@@ -36,6 +36,17 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @if (Model.Category != null)
+            {
+                @Html.DisplayFor(model => model.Category.Name)
+            }
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.CreatedUtc)
         </dt>
 

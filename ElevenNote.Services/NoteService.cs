@@ -76,7 +76,8 @@ namespace ElevenNote.Services
                         Title = entity.Title,
                         Content = entity.Content,
                         //CategoryId = entity.CategoryId,
-                        //Category = entity.Category,
+                        Category = entity.Category,
+                        IsStarred = entity.IsStarred,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
@@ -94,7 +95,7 @@ namespace ElevenNote.Services
 
                 entity.Title = model.Title;
                 entity.Content = model.Content;
-                //entity.CategoryId = model.CategoryId;
+                entity.CategoryId = model.CategoryId;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
                 entity.IsStarred = model.IsStarred;
 

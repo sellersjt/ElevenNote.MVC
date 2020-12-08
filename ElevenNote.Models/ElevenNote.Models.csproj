@@ -83,6 +83,7 @@
     <Compile Include="CategoryEdit.cs" />
     <Compile Include="CategoryListItem.cs" />
     <Compile Include="CreateNoteViewModel.cs" />
+    <Compile Include="EditNoteViewModel.cs" />
     <Compile Include="NoteCreate.cs" />
     <Compile Include="NoteDetail.cs" />
     <Compile Include="NoteEdit.cs" />

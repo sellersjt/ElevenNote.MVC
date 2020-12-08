@@ -76,18 +76,29 @@ namespace ElevenNote.WebMVC.Controllers
         // GET: Edit
         public ActionResult Edit(int id)
         {
-            var service = CreateNoteService();
-            var detail = service.GetNoteById(id);
+            var noteService = CreateNoteService();
+            var detail = noteService.GetNoteById(id);
 
-            var model =
-                new NoteEdit
+            var viewModel =
+                new EditNoteViewModel
                 {
                     NoteId = detail.NoteId,
                     Title = detail.Title,
-                    Content = detail.Content
+                    Content = detail.Content,
+                    IsStarred = detail.IsStarred
                 };
 
-            return View(model);
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var CategoryService = new CategoryService(userId);
+            var categories = CategoryService.GetCategories();
+
+            viewModel.Categories = categories.Select(c => new SelectListItem
+            {
+                Text = c.Name,
+                Value = c.CategoryId.ToString()
+            });
+
+            return View(viewModel);
         }
 
         // POST: Edit
