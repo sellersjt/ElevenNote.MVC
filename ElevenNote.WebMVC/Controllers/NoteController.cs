@@ -85,7 +85,8 @@ namespace ElevenNote.WebMVC.Controllers
                     NoteId = detail.NoteId,
                     Title = detail.Title,
                     Content = detail.Content,
-                    IsStarred = detail.IsStarred
+                    IsStarred = detail.IsStarred,
+                    CategoryId = detail.Category.CategoryId
                 };
 
             var userId = Guid.Parse(User.Identity.GetUserId());
