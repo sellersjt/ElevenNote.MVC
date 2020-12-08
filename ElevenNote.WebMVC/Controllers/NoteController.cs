@@ -31,7 +31,7 @@ namespace ElevenNote.WebMVC.Controllers
 
             var viewModel = new CreateNoteViewModel();
 
-            viewModel.Categories = categories.Select(c => new SelectListItem
+            viewModel.Categories = categories.OrderBy(n => n.Name).Select(c => new SelectListItem
             {
                 Text = c.Name,
                 Value = c.CategoryId.ToString()
