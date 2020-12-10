@@ -10,6 +10,7 @@ namespace ElevenNote.Models
 {
     public class NoteListItem
     {
+        [Display(Name = "Note Id")]
         public int NoteId { get; set; }
         public string Title { get; set; }
         public Category Category { get; set; }
