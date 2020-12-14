@@ -24,5 +24,8 @@ namespace ElevenNote.Models
         [Required]
         [MaxLength(8000)]
         public string Content { get; set; }
+
+        [Display(Name = "Important")]
+        public bool IsStarred { get; set; }
     }
 }

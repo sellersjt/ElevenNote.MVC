@@ -26,7 +26,8 @@ namespace ElevenNote.Services
                      Title = model.Title,
                      Content = model.Content,
                      CategoryId = model.CategoryId,
-                     CreatedUtc = DateTimeOffset.Now
+                     CreatedUtc = DateTimeOffset.Now,
+                     IsStarred = model.IsStarred
                  };
 
             using (var ctx = new ApplicationDbContext())
